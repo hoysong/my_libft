@@ -6,7 +6,7 @@
 /*   By: hoysong <hoysong@student.42gyeongsan.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/08 05:23:10 by hoysong           #+#    #+#             */
-/*   Updated: 2024/03/10 22:29:48 by hoysong          ###   ########.fr       */
+/*   Updated: 2024/03/11 17:26:51 by hoysong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,6 @@ char	**make_arr(char const *s, char c, int *count)
 		if (!*s++)
 			break ;
 	}
-	if (*count
 	arr = malloc(sizeof(char *) * (*count));
 	if (arr == 0)
 		return (0);
@@ -95,20 +94,4 @@ char	**ft_split(char const *s, char c)
 	if (split_count != index)
 		ft_free(splits, &index);
 	return (splits);
-}
-
-#include <stdio.h>
-int	main(void)
-{
-	char	str1[] = "  hello  my world! asdf  ";
-	char	c = ' ';
-	char	**splits;
-	splits = ft_split(str1, c);
-
-	printf("%s\n", *splits);
-	printf("%s\n", *(splits + 1));
-	printf("%s\n", *(splits + 2));
-	printf("%p\n", *(splits + 3));
-	printf("%p\n", *(splits + 4));
-	printf("%p\n", *(splits + 5));
 }
