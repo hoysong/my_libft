@@ -6,7 +6,7 @@
 /*   By: hoysong <hoysong@student.42gyeongsan.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 15:07:21 by hoysong           #+#    #+#             */
-/*   Updated: 2024/03/12 15:19:22 by hoysong          ###   ########.fr       */
+/*   Updated: 2024/03/12 17:00:55 by hoysong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	*ft_memset(void *dest, int n_src, unsigned long len);
 void	ft_bzero(void *dest, size_t num);
 void	*ft_memcpy(void *dest, const void *src, size_t n);
 void	*ft_memmove(void *dest, const void *src, size_t n);
-size_t	ft_strlcpy(char* dest, const char* src, size_t maxlen);
+size_t	ft_strlcpy(char *dest, const char *src, size_t maxlen);
 size_t	ft_strlcat(char *dest, const char *src, size_t size);
 int		ft_toupper(int c);
 int		ft_tolower(int c);

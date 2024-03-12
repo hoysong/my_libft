@@ -6,7 +6,7 @@
 /*   By: hoysong <hoysong@student.42gyeongsan.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 13:26:18 by hoysong           #+#    #+#             */
-/*   Updated: 2024/03/02 20:18:07 by hoysong          ###   ########.fr       */
+/*   Updated: 2024/03/12 16:57:31 by hoysong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,5 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	while (*src && destlen < --size)
 		*dest++ = *src++;
 	*dest = '\0';
-	return(destlen + srclen);
+	return (destlen + srclen);
 }

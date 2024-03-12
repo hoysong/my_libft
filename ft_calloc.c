@@ -6,17 +6,17 @@
 /*   By: hoysong <hoysong@student.42gyeongsan.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/01 21:05:09 by hoysong           #+#    #+#             */
-/*   Updated: 2024/03/12 10:56:31 by hoysong          ###   ########.fr       */
+/*   Updated: 2024/03/12 16:51:30 by hoysong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <stddef.h>
 
-void *ft_calloc(size_t num, size_t size)
+void	*ft_calloc(size_t num, size_t size)
 {
 	unsigned char	*ptr;
-	size_t	i;
+	size_t			i;
 
 	ptr = malloc(size * num);
 	if (ptr == 0)

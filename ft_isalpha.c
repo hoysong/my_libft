@@ -6,13 +6,13 @@
 /*   By: hoysong <hoysong@student.42gyeongsan.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/26 13:15:30 by hoysong           #+#    #+#             */
-/*   Updated: 2024/02/26 14:12:01 by hoysong          ###   ########.fr       */
+/*   Updated: 2024/03/12 16:52:02 by hoysong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isalpha(int num)
 {
-	char c;
+	char	c;
 
 	c = num;
 	if (c >= 'a' && c <= 'z')

@@ -6,7 +6,7 @@
 /*   By: hoysong <hoysong@student.42gyeongsan.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/29 21:57:30 by hoysong           #+#    #+#             */
-/*   Updated: 2024/03/04 23:45:05 by hoysong          ###   ########.fr       */
+/*   Updated: 2024/03/12 16:59:26 by hoysong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	const char	*biglen;
-	char	*bigptr;
-	size_t	i;
+	char		*bigptr;
+	size_t		i;
 
 	if (*little == '\0')
 		return ((char *)big);

@@ -6,7 +6,7 @@
 /*   By: hoysong <hoysong@student.42gyeongsan.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/08 05:23:10 by hoysong           #+#    #+#             */
-/*   Updated: 2024/03/12 16:32:36 by hoysong          ###   ########.fr       */
+/*   Updated: 2024/03/12 16:56:55 by hoysong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 
 static char	**make_arr(char const *s, char c, int *count)
 {
-	int	i;
+	int		i;
 	char	**arr;
 
 	i = 0;
@@ -25,11 +25,13 @@ static char	**make_arr(char const *s, char c, int *count)
 		if (*s != c && *s != '\0')
 			i++;
 		else if (*s == c || *s == '\0')
+		{
 			if (i > 0)
 			{
 				(*count)++;
 				i = 0;
 			}
+		}
 		if (!*s++)
 			break ;
 	}
@@ -83,8 +85,8 @@ static void	ft_free(char **splits, int *index)
 
 char	**ft_split(char const *s, char c)
 {
-	int	split_count;
-	int	index;
+	int		split_count;
+	int		index;
 	char	**splits;
 
 	split_count = 0;

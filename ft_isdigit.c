@@ -6,14 +6,14 @@
 /*   By: hoysong <hoysong@student.42gyeongsan.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/26 14:12:28 by hoysong           #+#    #+#             */
-/*   Updated: 2024/03/02 00:42:52 by hoysong          ###   ########.fr       */
+/*   Updated: 2024/03/12 16:54:37 by hoysong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isdigit(int num)
 {
 	char	c;
-	
+
 	c = num;
 	if (c >= '0' && c <= '9')
 		return (1);

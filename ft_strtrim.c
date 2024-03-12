@@ -6,7 +6,7 @@
 /*   By: hoysong <hoysong@42gyeongsan.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/04 22:44:57 by hoysong           #+#    #+#             */
-/*   Updated: 2024/03/12 14:18:30 by hoysong          ###   ########.fr       */
+/*   Updated: 2024/03/12 17:00:11 by hoysong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <stdlib.h>
 #include "libft.h"
 
-static char *find_front(const char *s1, const char *set)
+static char	*find_front(const char *s1, const char *set)
 {
 	size_t	i;
 
@@ -48,7 +48,7 @@ static void	find_end(const char *set, char *start_ptr, char *end_ptr)
 	}
 }
 
-char *ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*start_ptr;
 	char	*end_ptr;
@@ -56,7 +56,6 @@ char *ft_strtrim(char const *s1, char const *set)
 
 	start_ptr = (char *)s1;
 	end_ptr = (char *)s1;
-
 	if (*s1 == '\0')
 		return (NULL);
 	while (*end_ptr)
@@ -66,6 +65,5 @@ char *ft_strtrim(char const *s1, char const *set)
 	find_end(set, start_ptr, end_ptr);
 	new_str = malloc(sizeof(char) * (ft_strlen(start_ptr) + 1));
 	ft_strlcpy(new_str, start_ptr, ft_strlen(start_ptr));
-
 	return (new_str);
 }
