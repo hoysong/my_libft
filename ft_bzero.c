@@ -6,7 +6,7 @@
 /*   By: hoysong <hoysong@student.42gyeongsan.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/27 12:37:13 by hoysong           #+#    #+#             */
-/*   Updated: 2024/03/02 00:47:29 by hoysong          ###   ########.fr       */
+/*   Updated: 2024/03/12 17:15:53 by hoysong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_bzero(void *dest, size_t num)
 {
-	size_t	*ptr;
+	char	*ptr;
 
 	ptr = dest;
 	while (num--)

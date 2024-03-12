@@ -6,7 +6,7 @@
 /*   By: hoysong <hoysong@student.42gyeongsan.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/27 14:32:18 by hoysong           #+#    #+#             */
-/*   Updated: 2024/03/12 16:49:18 by hoysong          ###   ########.fr       */
+/*   Updated: 2024/03/12 20:01:47 by hoysong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stddef.h>
@@ -18,6 +18,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 
 	destptr = (unsigned char *)dest;
 	srcptr = (unsigned char *)src;
+	if (destptr == 0 || srcptr == 0)
+		return (0);
 	while (n--)
 		*destptr++ = *srcptr++;
 	return (dest);
