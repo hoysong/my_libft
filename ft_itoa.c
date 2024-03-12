@@ -6,7 +6,7 @@
 /*   By: hoysong <hoysong@student.42gyeongsan.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/05 02:48:30 by hoysong           #+#    #+#             */
-/*   Updated: 2024/03/07 17:28:19 by hoysong          ###   ########.fr       */
+/*   Updated: 2024/03/12 16:32:01 by hoysong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <stdlib.h>
 #include "libft.h"
 
-int	str_reverse(char *s1)
+static int	str_reverse(char *s1)
 {
 	char	*start;
 	char	bucket[11];
@@ -40,7 +40,7 @@ int	str_reverse(char *s1)
 	return (i);
 }
 
-int	str_insert(char *dest, long long num)
+static int	str_insert(char *dest, long long num)
 {
 	int	i;
 	int	sign;

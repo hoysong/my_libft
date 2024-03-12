@@ -1,13 +1,10 @@
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 RM = rm -f
-AR = ar rcus
+AR = ar vrcus
 ARFLAGS = crs
 SRCS = \
        ft_split.c \
-       ft_splitdump.c\
-       freetest.c \
-       ft_splitdump2.c \
        ft_atoi.c \
        ft_strchr.c \
        ft_bzero.c \
@@ -30,11 +27,9 @@ SRCS = \
        ft_memcmp.c \
        ft_strnstr.c \
        ft_memcpy.c \
-       ft_strnstrtest.c \
        ft_memmove.c \
        ft_strrchr.c \
        ft_memset.c \
-       ft_putchar.c \
        ft_strtrim.c \
        ft_putchar_fd.c \
        ft_substr.c \
@@ -48,15 +43,20 @@ OBJS = $(SRCS:.c=.o)
 
 NAME = libft.a
 
+$(NAME): $(OBJS)
+	$(AR) $(NAME) $(OBJS)
+
 all: $(NAME)
 
-$(NAME): $(OBJS)
-	$(AR) $(NAME) $(OBJ)
+%.o: %.c
+	$(CC) $(CFLAGS) -c -o $@ $? 
 
 clean:
 	$(RM) $(OBJS)
 
-fclean:
+fclean: clean
 	$(RM) $(NAME)
+
+re: clean all
 
 .PHONY: all clean fclean re

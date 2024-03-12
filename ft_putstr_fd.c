@@ -6,10 +6,11 @@
 /*   By: hoysong <hoysong@student.42gyeongsan.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 13:17:42 by hoysong           #+#    #+#             */
-/*   Updated: 2024/03/06 13:24:16 by hoysong          ###   ########.fr       */
+/*   Updated: 2024/03/12 14:47:38 by hoysong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <unistd.h>
 #include "libft.h"
 
 void ft_putstr_fd(char *s, int fd)

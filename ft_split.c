@@ -6,7 +6,7 @@
 /*   By: hoysong <hoysong@student.42gyeongsan.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/08 05:23:10 by hoysong           #+#    #+#             */
-/*   Updated: 2024/03/11 17:26:51 by hoysong          ###   ########.fr       */
+/*   Updated: 2024/03/12 16:32:36 by hoysong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <stdlib.h>
 #include "libft.h"
 
-char	**make_arr(char const *s, char c, int *count)
+static char	**make_arr(char const *s, char c, int *count)
 {
 	int	i;
 	char	**arr;
@@ -39,7 +39,7 @@ char	**make_arr(char const *s, char c, int *count)
 	return (arr);
 }
 
-void	insert_arr(char const *s, char c, char **splits, int *index)
+static void	insert_arr(char const *s, char c, char **splits, int *index)
 {
 	int	i;
 
@@ -67,7 +67,7 @@ void	insert_arr(char const *s, char c, char **splits, int *index)
 	splits[*index] = NULL;
 }
 
-void	ft_free(char **splits, int *index)
+static void	ft_free(char **splits, int *index)
 {
 	if (*index != 0)
 		(*index)--;
