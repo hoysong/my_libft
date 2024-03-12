@@ -6,7 +6,7 @@
 /*   By: hoysong <hoysong@student.42gyeongsan.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/27 22:59:08 by hoysong           #+#    #+#             */
-/*   Updated: 2024/03/12 16:55:22 by hoysong          ###   ########.fr       */
+/*   Updated: 2024/03/12 21:00:52 by hoysong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 
 	destptr = (unsigned char *)dest;
 	srcptr = (unsigned char *)src;
+	if (destptr == 0 || srcptr == 0)
+		return (0);
 	if (src < dest)
 		while (n--)
 			destptr[n] = srcptr[n];
