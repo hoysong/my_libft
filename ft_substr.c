@@ -6,7 +6,7 @@
 /*   By: hoysong <hoysong@student.42gyeongsan.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/02 16:07:04 by hoysong           #+#    #+#             */
-/*   Updated: 2024/03/12 17:00:29 by hoysong          ###   ########.fr       */
+/*   Updated: 2024/03/13 22:21:20 by hoysong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		return (0);
 	while (s != startptr)
 		s++;
-	ft_strlcpy(newstr, s, len);
+	ft_strlcpy(newstr, s, len + 1);
 	return (newstr);
 }

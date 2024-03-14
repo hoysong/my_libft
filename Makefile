@@ -59,5 +59,7 @@ fclean: clean
 
 re: clean
 	make all
-
+so:
+#	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRC)
+	gcc -nostartfiles -shared -o libft.so $(OBJS)
 .PHONY: all clean fclean re

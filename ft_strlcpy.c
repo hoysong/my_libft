@@ -6,7 +6,7 @@
 /*   By: hoysong <hoysong@42gyeongsan.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/26 17:14:51 by hoysong           #+#    #+#             */
-/*   Updated: 2024/03/12 16:58:27 by hoysong          ###   ########.fr       */
+/*   Updated: 2024/03/13 16:03:50 by hoysong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,17 +15,19 @@
 
 size_t	ft_strlcpy(char *dest, const char *src, size_t maxlen)
 {
-	unsigned long	srclen;
+	size_t	srclen;
 
 	srclen = ft_strlen(src);
-	if (srclen > maxlen)
-		while (maxlen--)
-			*dest++ = *src++;
-	else
+	if (maxlen < 1)
+		return (srclen);
+	else if (maxlen-- > 0)
 	{
-		while (*src)
+		while (maxlen > 0 && *src)
+		{
 			*dest++ = *src++;
+			maxlen--;
+		}
+		*dest = '\0';
 	}
-	*dest = '\0';
 	return (srclen);
 }

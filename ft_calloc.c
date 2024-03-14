@@ -6,7 +6,7 @@
 /*   By: hoysong <hoysong@student.42gyeongsan.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/01 21:05:09 by hoysong           #+#    #+#             */
-/*   Updated: 2024/03/12 16:51:30 by hoysong          ###   ########.fr       */
+/*   Updated: 2024/03/13 17:25:28 by hoysong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	*ft_calloc(size_t num, size_t size)
 	if (ptr == 0)
 		return (0);
 	i = 0;
-	while (&ptr[i] != &ptr[size * num - 1])
+	while (&ptr[i] != &ptr[size * num])
 		ptr[i++] = 0;
 	return (ptr);
 }
