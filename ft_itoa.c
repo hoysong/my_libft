@@ -6,7 +6,7 @@
 /*   By: hoysong <hoysong@student.42gyeongsan.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/05 02:48:30 by hoysong           #+#    #+#             */
-/*   Updated: 2024/03/12 16:32:01 by hoysong          ###   ########.fr       */
+/*   Updated: 2024/03/16 00:53:45 by hoysong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 static int	str_reverse(char *s1)
 {
 	char	*start;
-	char	bucket[11];
+	char	bucket[12];
 	int		i;
 
 	i = 0;
@@ -30,6 +30,7 @@ static int	str_reverse(char *s1)
 		bucket[i] = *s1;
 		i++;
 	}
+	bucket[i] = '\0';
 	i = 0;
 	while (bucket[i])
 	{
@@ -71,13 +72,18 @@ static int	str_insert(char *dest, long long num)
 char	*ft_itoa(int n)
 {
 	char	*newstr;
-	char	numstr[11];
+	char	numstr[12];
 	int		numstrlen;
 	int		sign;
+	int		alloc_sign;
 
 	sign = str_insert(numstr, (long long)n);
+	if (sign == -1)
+		alloc_sign = 1;
+	else
+		alloc_sign = 0;
 	numstrlen = str_reverse(numstr);
-	newstr = (char *)malloc(sizeof(char) + numstrlen + sign);
+	newstr = (char *)malloc(sizeof(char) * (numstrlen + 1 + alloc_sign));
 	if (newstr == 0)
 		return (0);
 	if (sign < 0)
@@ -85,7 +91,7 @@ char	*ft_itoa(int n)
 		*newstr = '-';
 		newstr++;
 	}
-	ft_strlcpy(newstr, numstr, ft_strlen(numstr));
+	ft_strlcpy(newstr, numstr, numstrlen + 1);
 	if (sign < 0)
 		newstr--;
 	return (newstr);
