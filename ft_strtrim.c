@@ -6,7 +6,7 @@
 /*   By: hoysong <hoysong@42gyeongsan.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/04 22:44:57 by hoysong           #+#    #+#             */
-/*   Updated: 2024/03/12 17:00:11 by hoysong          ###   ########.fr       */
+/*   Updated: 2024/03/14 18:56:30 by hoysong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,10 +31,12 @@ static char	*find_front(const char *s1, const char *set)
 	return ((char *)s1);
 }
 
-static void	find_end(const char *set, char *start_ptr, char *end_ptr)
+size_t	find_end(const char *set, char *start_ptr, char *end_ptr)
 {
 	size_t	i;
+	size_t	find;
 
+	find = 0;
 	while (start_ptr != end_ptr)
 	{
 		i = 0;
@@ -43,9 +45,10 @@ static void	find_end(const char *set, char *start_ptr, char *end_ptr)
 		if (set[i] == '\0')
 			break ;
 		else if (set[i] == *end_ptr)
-			*end_ptr = '\0';
+			find++;
 		end_ptr--;
 	}
+	return (find);
 }
 
 char	*ft_strtrim(char const *s1, char const *set)
@@ -53,17 +56,23 @@ char	*ft_strtrim(char const *s1, char const *set)
 	char	*start_ptr;
 	char	*end_ptr;
 	char	*new_str;
+	size_t	end_count;
 
 	start_ptr = (char *)s1;
 	end_ptr = (char *)s1;
-	if (*s1 == '\0')
-		return (NULL);
 	while (*end_ptr)
 		end_ptr++;
 	end_ptr--;
 	start_ptr = find_front(s1, set);
-	find_end(set, start_ptr, end_ptr);
-	new_str = malloc(sizeof(char) * (ft_strlen(start_ptr) + 1));
-	ft_strlcpy(new_str, start_ptr, ft_strlen(start_ptr));
+	if (*start_ptr == '\0')
+	{
+		new_str = malloc(sizeof(char) * 1);
+		if (new_str == NULL)
+			return (0);
+		*new_str = '\0';
+		return (new_str);
+	}
+	end_count = find_end(set, start_ptr, end_ptr);
+	new_str = ft_substr(start_ptr, 0, (ft_strlen(start_ptr) - end_count));
 	return (new_str);
 }

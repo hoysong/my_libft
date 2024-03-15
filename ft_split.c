@@ -6,7 +6,7 @@
 /*   By: hoysong <hoysong@student.42gyeongsan.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/08 05:23:10 by hoysong           #+#    #+#             */
-/*   Updated: 2024/03/12 16:56:55 by hoysong          ###   ########.fr       */
+/*   Updated: 2024/03/15 03:09:14 by hoysong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ static char	**make_arr(char const *s, char c, int *count)
 		if (!*s++)
 			break ;
 	}
-	arr = malloc(sizeof(char *) * (*count));
+	arr = malloc(sizeof(char *) * (*count + 1));
 	if (arr == 0)
 		return (0);
 	return (arr);
@@ -52,10 +52,10 @@ static void	insert_arr(char const *s, char c, char **splits, int *index)
 		{
 			if (i > 0)
 			{
-				splits[*index] = malloc(sizeof(char) * i + 1);
+				splits[*index] = malloc(sizeof(char) * (i + 1));
 				if (splits[*index] == NULL)
 					return ;
-				ft_strlcpy(splits[(*index)++], s, i);
+				ft_strlcpy(splits[(*index)++], s, i + 1);
 				s = &s[i];
 				i = 0;
 			}

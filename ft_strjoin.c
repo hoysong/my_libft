@@ -6,7 +6,7 @@
 /*   By: hoysong <hoysong@student.42gyeongsan.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/02 18:28:12 by hoysong           #+#    #+#             */
-/*   Updated: 2024/03/12 10:58:09 by hoysong          ###   ########.fr       */
+/*   Updated: 2024/03/14 11:45:19 by hoysong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,10 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	char	*newstr;
 
 	total_len = ft_strlen((const char *)s1) + ft_strlen((const char *)s2);
-	newstr = (char *)malloc(sizeof(char) * total_len);
+	newstr = (char *)malloc(sizeof(char) * (total_len + 1));
 	if (newstr == 0)
 		return (0);
-	ft_strlcpy(newstr, (const char *)s1, ft_strlen((const char *)s1));
+	ft_strlcpy(newstr, (const char *)s1, ft_strlen((const char *)s1) + 1);
 	ft_strlcat(newstr, (const char *)s2, total_len + 1);
 	return (newstr);
 }
