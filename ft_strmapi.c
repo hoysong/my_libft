@@ -6,7 +6,7 @@
 /*   By: hoysong <hoysong@student.42gyeongsan.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/05 23:30:53 by hoysong           #+#    #+#             */
-/*   Updated: 2024/03/12 13:21:20 by hoysong          ###   ########.fr       */
+/*   Updated: 2024/03/16 11:11:17 by hoysong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	char	*newstr;
 
 	s_len = ft_strlen(s);
-	newstr = (char *)malloc(sizeof(char) * s_len);
+	newstr = (char *)malloc(sizeof(char) * (s_len + 1));
 	if (newstr == 0)
 		return (0);
 	i = 0;

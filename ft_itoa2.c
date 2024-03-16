@@ -6,7 +6,7 @@
 /*   By: hoysong <hoysong@student.42gyeongsan.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/05 02:48:30 by hoysong           #+#    #+#             */
-/*   Updated: 2024/03/15 17:43:58 by hoysong          ###   ########.fr       */
+/*   Updated: 2024/03/16 21:44:59 by hoysong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,9 +43,4 @@ char	*ft_itoa(int src)
 		sign = -1;
 	}
 	numstr = convert_to_char(src);
-}
-
-int	main(void)
-{
-	ft_itoa(-1234);
 }
