@@ -6,7 +6,7 @@
 /*   By: hoysong <hoysong@student.42gyeongsan.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 13:52:43 by hoysong           #+#    #+#             */
-/*   Updated: 2024/03/17 15:50:01 by hoysong          ###   ########.fr       */
+/*   Updated: 2024/03/17 16:16:51 by hoysong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,12 +38,4 @@ void	ft_putnbr_fd(int n, int fd)
 	if (numstr[i] == '\0')
 		i++;
 	write(fd, &numstr[i], ft_strlen(&numstr[i]));
-}
-
-#include <fcntl.h>
-int	main(void)
-{
-	int	fd;
-	fd = open("open.txt", O_RDWR);
-	ft_putnbr_fd(2147483647, fd);
 }

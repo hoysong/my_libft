@@ -1,35 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hoysong <hoysong@student.42gyeongsan.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/01 19:21:21 by hoysong           #+#    #+#             */
-/*   Updated: 2024/03/17 16:12:02 by hoysong          ###   ########.fr       */
+/*   Created: 2024/03/17 16:19:03 by hoysong           #+#    #+#             */
+/*   Updated: 2024/03/17 16:29:57 by hoysong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
-int	ft_atoi(const char *nptr)
+t_list	*ft_lstnew(void *content)
 {
-	int	intnum;
-	int	minus;
+	t_list new_node;
+	new_node.content = content;
+	return (new_node);
 
-	intnum = 0;
-	minus = 1;
-	while ((*nptr >= 9 && *nptr <= 13) || *nptr == ' ')
-		nptr++;
-	if (*nptr == '-')
-	{
-		minus = -1;
-		nptr++;
-	}
-	else if (*nptr == '+')
-		nptr++;
-	while (*nptr && *nptr >= '0' && *nptr <= '9')
-		intnum = intnum * 10 + *(char *)nptr++ - '0';
-	intnum *= minus;
-	return (intnum);
 }
