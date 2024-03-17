@@ -6,7 +6,7 @@
 /*   By: hoysong <hoysong@student.42gyeongsan.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/05 02:48:30 by hoysong           #+#    #+#             */
-/*   Updated: 2024/03/16 11:06:25 by hoysong          ###   ########.fr       */
+/*   Updated: 2024/03/17 14:51:38 by hoysong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@
 
 static int	str_reverse(char *s1)
 {
+	int		i;
 	char	*start;
 	char	bucket[12];
-	int		i;
 
 	i = 0;
 	start = s1;

@@ -6,7 +6,7 @@
 /*   By: hoysong <hoysong@student.42gyeongsan.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/26 15:51:17 by hoysong           #+#    #+#             */
-/*   Updated: 2024/03/13 22:11:25 by hoysong          ###   ########.fr       */
+/*   Updated: 2024/03/17 14:39:21 by hoysong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ size_t	ft_strlen(const char *dest)
 	const char	*ptr;
 
 	ptr = dest;
-	while (*ptr++);
+	while (*ptr++)
+		;
 	return (--ptr - dest);
 }

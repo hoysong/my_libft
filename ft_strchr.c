@@ -6,18 +6,17 @@
 /*   By: hoysong <hoysong@student.42gyeongsan.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/29 13:58:28 by hoysong           #+#    #+#             */
-/*   Updated: 2024/03/13 11:25:53 by hoysong          ###   ########.fr       */
+/*   Updated: 2024/03/17 14:39:05 by hoysong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*ft_strchr(const char *s, int c)
 {
-		while (*s != c && *s)
-			s++;
-		if (*s == c)
-			return ((char *)s);
-		else if (*s == 0)
-			return (0);
-
+	while (*s != c && *s)
+		s++;
+	if (*s == c)
+		return ((char *)s);
+	else if (*s == 0)
+		return (0);
 	return ((char *)s);
 }
