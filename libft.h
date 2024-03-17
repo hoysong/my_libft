@@ -6,7 +6,7 @@
 /*   By: hoysong <hoysong@student.42gyeongsan.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 15:07:21 by hoysong           #+#    #+#             */
-/*   Updated: 2024/03/17 20:33:42 by hoysong          ###   ########.fr       */
+/*   Updated: 2024/03/18 02:33:30 by hoysong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,11 @@
 # define LIBFT_H
 # include <stddef.h>
 
-typedef struct		s_list
+typedef struct s_list
 {
-	char	c;
-	void			*content;
-	struct s_list	*next;
-}					t_list;
+	void *content;
+	void *next;
+} t_list;
 int		ft_isalpha(int num);
 int		ft_isdigit(int num);
 int		ft_isalnum(int num);
@@ -32,6 +31,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n);
 void	*ft_memmove(void *dest, const void *src, size_t n);
 size_t	ft_strlcpy(char *dest, const char *src, size_t maxlen);
 size_t	ft_strlcat(char *dest, const char *src, size_t size);
+char	*ft_strdup(const char *s);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
 char	*ft_strchr(const char *s, int c);
