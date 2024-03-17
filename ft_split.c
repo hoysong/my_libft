@@ -6,7 +6,7 @@
 /*   By: hoysong <hoysong@student.42gyeongsan.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/08 05:23:10 by hoysong           #+#    #+#             */
-/*   Updated: 2024/03/16 22:39:51 by hoysong          ###   ########.fr       */
+/*   Updated: 2024/03/17 23:46:44 by hoysong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,9 +75,9 @@ static void	ft_free(char **splits, int *index)
 		(*index)--;
 	while (1)
 	{
-		free(splits[*index]);
 		if (*index == 0)
 			break ;
+		free(splits[*index]);
 		(*index)--;
 	}
 	free(splits);
