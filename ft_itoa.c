@@ -6,7 +6,7 @@
 /*   By: hoysong <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 16:14:50 by hoysong           #+#    #+#             */
-/*   Updated: 2024/03/18 18:52:49 by hoysong          ###   ########.fr       */
+/*   Updated: 2024/03/18 20:36:57 by hoysong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static char	*insert_digit(char *num_str, long int long_num)
 {
-	int	i;
+	int		i;
 	char	num_sign;
 
 	i = 10;
@@ -47,12 +47,12 @@ char	*ft_itoa(int n)
 	long_num = n;
 	if (long_num == 0)
 	{
-	    new_str = ft_strdup("0");
+		new_str = ft_strdup("0");
 	}
 	else
 	{
-	    digit_str = insert_digit(num_str, long_num);
-	    new_str = ft_strdup(digit_str);
+		digit_str = insert_digit(num_str, long_num);
+		new_str = ft_strdup(digit_str);
 	}
 	return (new_str);
 }

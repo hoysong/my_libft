@@ -6,7 +6,7 @@
 /*   By: hoysong <hoysong@student.42gyeongsan.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 15:07:21 by hoysong           #+#    #+#             */
-/*   Updated: 2024/03/18 02:33:30 by hoysong          ###   ########.fr       */
+/*   Updated: 2024/03/18 20:43:31 by hoysong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@
 
 typedef struct s_list
 {
-	void *content;
-	void *next;
-} t_list;
+	void		*content;
+	void		*next;
+}				t_list;
 int		ft_isalpha(int num);
 int		ft_isdigit(int num);
 int		ft_isalnum(int num);

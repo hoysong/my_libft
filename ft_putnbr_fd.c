@@ -6,7 +6,7 @@
 /*   By: hoysong <hoysong@student.42gyeongsan.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 13:52:43 by hoysong           #+#    #+#             */
-/*   Updated: 2024/03/18 19:37:53 by hoysong          ###   ########.fr       */
+/*   Updated: 2024/03/18 20:42:06 by hoysong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 static char	*insert_digit(char *num_str, long int long_num)
 {
-	int	i;
+	int		i;
 	char	num_sign;
 
 	i = 10;
@@ -43,16 +43,15 @@ void	ft_putnbr_fd(int n, int fd)
 	long int	long_num;
 	char		*digit_str;
 	char		num_str[12];
-	char		*new_str;
 
 	long_num = n;
 	if (long_num == 0)
 	{
-	    write(fd, "0", 1);
+		write(fd, "0", 1);
 	}
 	else
 	{
-	    digit_str = insert_digit(num_str, long_num);
-	    write(fd, digit_str, ft_strlen(digit_str));
+		digit_str = insert_digit(num_str, long_num);
+		write(fd, digit_str, ft_strlen(digit_str));
 	}
 }
