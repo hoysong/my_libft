@@ -6,7 +6,7 @@
 /*   By: hoysong <hoysong@42gyeongsan.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/04 22:44:57 by hoysong           #+#    #+#             */
-/*   Updated: 2024/03/14 18:56:30 by hoysong          ###   ########.fr       */
+/*   Updated: 2024/03/18 20:21:50 by hoysong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ static char	*find_front(const char *s1, const char *set)
 	return ((char *)s1);
 }
 
-size_t	find_end(const char *set, char *start_ptr, char *end_ptr)
+static size_t	find_end(const char *set, char *start_ptr, char *end_ptr)
 {
 	size_t	i;
 	size_t	find;

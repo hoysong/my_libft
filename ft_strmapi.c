@@ -6,11 +6,10 @@
 /*   By: hoysong <hoysong@student.42gyeongsan.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/05 23:30:53 by hoysong           #+#    #+#             */
-/*   Updated: 2024/03/16 11:11:17 by hoysong          ###   ########.fr       */
+/*   Updated: 2024/03/18 20:21:07 by hoysong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
 #include <stdlib.h>
 #include "libft.h"
 

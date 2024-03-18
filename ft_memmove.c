@@ -6,7 +6,7 @@
 /*   By: hoysong <hoysong@student.42gyeongsan.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/27 22:59:08 by hoysong           #+#    #+#             */
-/*   Updated: 2024/03/13 00:38:26 by hoysong          ###   ########.fr       */
+/*   Updated: 2024/03/18 19:45:22 by hoysong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 		return (0);
 	if (src < dest)
 		while (n--)
-			destptr[n] = srcptr[n];
+		    destptr[n] = srcptr[n];
 	else
 		while (n--)
 			*destptr++ = *srcptr++;
