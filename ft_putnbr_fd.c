@@ -6,36 +6,52 @@
 /*   By: hoysong <hoysong@student.42gyeongsan.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 13:52:43 by hoysong           #+#    #+#             */
-/*   Updated: 2024/03/18 03:28:09 by hoysong          ###   ########.fr       */
+/*   Updated: 2024/03/18 19:07:03 by hoysong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include "libft.h"
+#include <unistd.h>
+static char	*insert_digit(char *num_str, long int long_num)
+{
+	int	i;
+	char	num_sign;
+
+	i = 10;
+	num_sign = '\0';
+	num_str[11] = '\0';
+	if (long_num < 0)
+	{
+		long_num *= -1;
+		num_sign = '-';
+	}
+	while (long_num > 0)
+	{
+		num_str[i] = long_num % 10 + '0';
+		long_num /= 10;
+		i--;
+	}
+	num_str[i] = num_sign;
+	if (num_str[i] == '\0')
+		i++;
+	return (&num_str[i]);
+}
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	char			numstr[12];
-	int				i;
-	char			sign;
+	long int	long_num;
+	char		*digit_str;
+	char		num_str[12];
+	char		*new_str;
 
-	i = 10;
-	sign = '\0';
-	if (n < 0)
-		sign = '-';
-	numstr[11] = '\0';
-	if (n == 0)
-		numstr[i--] = '0';
+	long_num = n;
+	if (long_num == 0)
+	{
+	    write(fd, "0", 1);
+	}
 	else
 	{
-		while ((unsigned int)n > 0)
-		{
-			numstr[i--] = (unsigned int)n % 10 + '0';
-			n = (unsigned int)n / 10;
-		}
+	    digit_str = insert_digit(num_str, long_num);
+	    write(fd, digit_str, ft_strlen(digit_str));
 	}
-	numstr[i] = sign;
-	if (numstr[i] == '\0')
-		i++;
-	write(fd, &numstr[i], ft_strlen(&numstr[i]));
 }

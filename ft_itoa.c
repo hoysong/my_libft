@@ -6,13 +6,13 @@
 /*   By: hoysong <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 16:14:50 by hoysong           #+#    #+#             */
-/*   Updated: 2024/03/18 18:46:18 by hoysong          ###   ########.fr       */
+/*   Updated: 2024/03/18 18:52:49 by hoysong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*insert_digit(char *num_str, long int long_num)
+static char	*insert_digit(char *num_str, long int long_num)
 {
 	int	i;
 	char	num_sign;
