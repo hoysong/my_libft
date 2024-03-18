@@ -6,7 +6,7 @@
 /*   By: hoysong <hoysong@student.42gyeongsan.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/08 05:23:10 by hoysong           #+#    #+#             */
-/*   Updated: 2024/03/17 23:46:44 by hoysong          ###   ########.fr       */
+/*   Updated: 2024/03/18 15:47:35 by hoysong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,34 +14,34 @@
 #include <stdlib.h>
 #include "libft.h"
 
-static char	**make_arr(char const *s, char c, int *count)
+static char	**make_arr(char const *s, char c, int *words)
 {
-	int		i;
+	int		count_alpha;
 	char	**arr;
 
-	i = 0;
+	count_alpha = 0;
 	while (1)
 	{
 		if (*s != c && *s != '\0')
-			i++;
+			count_alpha++;
 		else if (*s == c || *s == '\0')
 		{
-			if (i > 0)
+			if (count_alpha > 0)
 			{
-				(*count)++;
-				i = 0;
+				(*words)++;
+				count_alpha = 0;
 			}
 		}
 		if (!*s++)
 			break ;
 	}
-	arr = malloc(sizeof(char *) * (*count + 1));
+	arr = malloc(sizeof(char *) * (*words + 1));
 	if (arr == 0)
 		return (0);
 	return (arr);
 }
 
-static void	insert_arr(char const *s, char c, char **splits, int *index)
+static void	insert_digit(char const *s, char c, char **splits_arr, int *index)
 {
 	int	i;
 
@@ -52,10 +52,10 @@ static void	insert_arr(char const *s, char c, char **splits, int *index)
 		{
 			if (i > 0)
 			{
-				splits[*index] = malloc(sizeof(char) * (i + 1));
-				if (splits[*index] == NULL)
+				splits_arr[*index] = malloc(sizeof(char) * (i + 1));
+				if (splits_arr[*index] == NULL)
 					return ;
-				ft_strlcpy(splits[(*index)++], s, i + 1);
+				ft_strlcpy(splits_arr[(*index)++], s, i + 1);
 				s = &s[i];
 				i = 0;
 			}
@@ -66,7 +66,7 @@ static void	insert_arr(char const *s, char c, char **splits, int *index)
 		else if (s[i] != c)
 			i++;
 	}
-	splits[*index] = NULL;
+	splits_arr[*index] = NULL;
 }
 
 static void	ft_free(char **splits, int *index)
@@ -92,7 +92,7 @@ char	**ft_split(char const *s, char c)
 	split_count = 0;
 	index = 0;
 	splits = make_arr(s, c, &split_count);
-	insert_arr(s, c, splits, &index);
+	insert_digit(s, c, splits, &index);
 	if (split_count != index)
 		ft_free(splits, &index);
 	return (splits);
