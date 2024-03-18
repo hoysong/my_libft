@@ -3,49 +3,56 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hoysong <hoysong@student.42gyeongsan.      +#+  +:+       +#+        */
+/*   By: hoysong <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/18 02:07:22 by hoysong           #+#    #+#             */
-/*   Updated: 2024/03/18 03:27:06 by hoysong          ###   ########.fr       */
+/*   Created: 2024/03/18 16:14:50 by hoysong           #+#    #+#             */
+/*   Updated: 2024/03/18 18:46:18 by hoysong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include "libft.h"
 
-void	insert(char *numstr, int *i, long int longnum)
+char	*insert_digit(char *num_str, long int long_num)
 {
-	while (longnum > 0)
+	int	i;
+	char	num_sign;
+
+	i = 10;
+	num_sign = '\0';
+	num_str[11] = '\0';
+	if (long_num < 0)
 	{
-		numstr[(*i)--] = longnum % 10 + '0';
-		longnum = longnum / 10;
+		long_num *= -1;
+		num_sign = '-';
 	}
+	while (long_num > 0)
+	{
+		num_str[i] = long_num % 10 + '0';
+		long_num /= 10;
+		i--;
+	}
+	num_str[i] = num_sign;
+	if (num_str[i] == '\0')
+		i++;
+	return (&num_str[i]);
 }
 
 char	*ft_itoa(int n)
 {
-	int			i;
-	char		sign;
-	char		*newstr;
-	char		numstr[12];
-	long int	longnum;
+	long int	long_num;
+	char		*digit_str;
+	char		num_str[12];
+	char		*new_str;
 
-	i = 10;
-	sign = '\0';
-	longnum = n;
-	if (n < 0)
+	long_num = n;
+	if (long_num == 0)
 	{
-		sign = '-';
-		longnum *= -1;
+	    new_str = ft_strdup("0");
 	}
-	numstr[11] = '\0';
-	if (n == 0)
-		numstr[i--] = '0';
 	else
-		insert(numstr, &i, longnum);
-	numstr[i] = sign;
-	if (numstr[i] == '\0')
-		i++;
-	newstr = ft_strdup(&numstr[i]);
-	return (newstr);
+	{
+	    digit_str = insert_digit(num_str, long_num);
+	    new_str = ft_strdup(digit_str);
+	}
+	return (new_str);
 }
