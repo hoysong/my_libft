@@ -6,11 +6,11 @@
 /*   By: hoysong <hoysong@student.42gyeongsan.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/01 19:21:21 by hoysong           #+#    #+#             */
-/*   Updated: 2024/03/17 16:12:02 by hoysong          ###   ########.fr       */
+/*   Updated: 2024/03/19 22:22:26 by hoysong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 int	ft_atoi(const char *nptr)
 {

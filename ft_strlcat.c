@@ -6,11 +6,10 @@
 /*   By: hoysong <hoysong@student.42gyeongsan.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 13:26:18 by hoysong           #+#    #+#             */
-/*   Updated: 2024/03/16 23:33:50 by hoysong          ###   ########.fr       */
+/*   Updated: 2024/03/19 22:24:36 by hoysong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
 #include "libft.h"
 
 size_t	ft_strlcat(char *dest, const char *src, size_t size)

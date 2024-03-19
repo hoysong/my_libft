@@ -6,12 +6,11 @@
 /*   By: hoysong <hoysong@student.42gyeongsan.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/17 16:19:03 by hoysong           #+#    #+#             */
-/*   Updated: 2024/03/17 20:41:08 by hoysong          ###   ########.fr       */
+/*   Updated: 2024/03/19 22:23:23 by hoysong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 t_list	*ft_lstnew(void *content)
 {

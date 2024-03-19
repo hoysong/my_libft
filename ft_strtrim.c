@@ -6,12 +6,10 @@
 /*   By: hoysong <hoysong@42gyeongsan.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/04 22:44:57 by hoysong           #+#    #+#             */
-/*   Updated: 2024/03/18 20:21:50 by hoysong          ###   ########.fr       */
+/*   Updated: 2024/03/19 22:25:17 by hoysong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-#include <stdlib.h>
 #include "libft.h"
 
 static char	*find_front(const char *s1, const char *set)

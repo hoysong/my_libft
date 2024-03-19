@@ -6,11 +6,11 @@
 /*   By: hoysong <hoysong@student.42gyeongsan.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/29 20:33:25 by hoysong           #+#    #+#             */
-/*   Updated: 2024/03/12 23:09:48 by hoysong          ###   ########.fr       */
+/*   Updated: 2024/03/19 22:23:30 by hoysong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {

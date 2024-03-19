@@ -6,11 +6,11 @@
 /*   By: hoysong <hoysong@student.42gyeongsan.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/29 21:57:30 by hoysong           #+#    #+#             */
-/*   Updated: 2024/03/13 15:40:51 by hoysong          ###   ########.fr       */
+/*   Updated: 2024/03/19 22:25:10 by hoysong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {

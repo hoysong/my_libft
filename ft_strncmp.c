@@ -6,11 +6,11 @@
 /*   By: hoysong <hoysong@student.42gyeongsan.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/29 15:15:27 by hoysong           #+#    #+#             */
-/*   Updated: 2024/03/13 12:27:31 by hoysong          ###   ########.fr       */
+/*   Updated: 2024/03/19 22:25:03 by hoysong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {

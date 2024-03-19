@@ -6,12 +6,10 @@
 /*   By: hoysong <hoysong@student.42gyeongsan.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/02 18:28:12 by hoysong           #+#    #+#             */
-/*   Updated: 2024/03/14 11:45:19 by hoysong          ###   ########.fr       */
+/*   Updated: 2024/03/19 22:24:32 by hoysong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stddef.h>
 #include "libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)
