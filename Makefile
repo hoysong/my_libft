@@ -1,8 +1,7 @@
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 RM = rm -f
-AR = ar vrcus
-ARFLAGS = crs
+AR = ar rcus
 SRCS = \
        ft_split.c \
        ft_atoi.c \
@@ -49,7 +48,7 @@ $(NAME): $(OBJS)
 all: $(NAME)
 
 %.o: %.c
-	$(CC) $(CFLAGS) -c -o $@ $? 
+	$(CC) $(CFLAGS) -c -o $@ $< 
 
 clean:
 	$(RM) $(OBJS)
@@ -59,7 +58,4 @@ fclean: clean
 
 re: clean
 	make all
-so:
-#	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRCS)
-	gcc -nostartfiles -shared -o libft.so $(OBJS)
 .PHONY: all clean fclean re
