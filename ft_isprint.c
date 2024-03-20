@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hoysong <hoysong@student.42gyeongsan.      +#+  +:+       +#+        */
+/*   By: hoysong <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/26 15:40:30 by hoysong           #+#    #+#             */
-/*   Updated: 2024/03/12 16:31:41 by hoysong          ###   ########.fr       */
+/*   Created: 2024/03/20 05:18:41 by hoysong           #+#    #+#             */
+/*   Updated: 2024/03/20 05:25:54 by hoysong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isprint(int num)
+int	ft_isprint(int c)
 {
-	if (num >= 32 && num <= 126)
-		return (1);
+	if (32 <= c && c <= 126)
+		return (16384);
 	return (0);
 }

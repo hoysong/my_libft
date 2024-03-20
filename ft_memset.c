@@ -3,19 +3,24 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hoysong <hoysong@student.42gyeongsan.      +#+  +:+       +#+        */
+/*   By: hoysong <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/26 19:30:11 by hoysong           #+#    #+#             */
-/*   Updated: 2024/02/29 22:14:08 by hoysong          ###   ########.fr       */
+/*   Created: 2024/03/20 07:07:03 by hoysong           #+#    #+#             */
+/*   Updated: 2024/03/20 12:23:08 by hoysong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memset(void *dest, int n_src, unsigned long len)
-{
-	unsigned char	*ptr;
+#include "libft.h"
 
-	ptr = dest;
-	while (len)
-		ptr[--len] = n_src;
-	return (dest);
+void	*ft_memset(void *s, int c, size_t n)
+{
+	int	i;
+
+	i = 0;
+	while (n > 0)
+	{
+		((char *)s)[i++] = (char)c;
+		n--;
+	}
+	return (s);
 }

@@ -3,18 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hoysong <hoysong@student.42gyeongsan.      +#+  +:+       +#+        */
+/*   By: hoysong <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/26 13:15:30 by hoysong           #+#    #+#             */
-/*   Updated: 2024/03/12 23:49:25 by hoysong          ###   ########.fr       */
+/*   Created: 2024/03/20 04:35:00 by hoysong           #+#    #+#             */
+/*   Updated: 2024/03/20 19:23:30 by hoysong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(int num)
+int	ft_isalpha(int c)
 {
-	if (num >= 'a' && num <= 'z')
-		return (1);
-	else if (num >= 'A' && num <= 'Z')
-		return (2);
+	if (c >= 'a' && c <= 'z' || \
+		c >= 'A' && c <= 'Z')
+		return (1024);
 	return (0);
 }

@@ -3,20 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hoysong <hoysong@student.42gyeongsan.      +#+  +:+       +#+        */
+/*   By: hoysong <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/27 12:37:13 by hoysong           #+#    #+#             */
-/*   Updated: 2024/03/19 22:22:40 by hoysong          ###   ########.fr       */
+/*   Created: 2024/03/20 12:23:36 by hoysong           #+#    #+#             */
+/*   Updated: 2024/03/20 19:23:09 by hoysong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *dest, size_t num)
+void	ft_bzero(void *s, size_t n)
 {
-	char	*ptr;
-
-	ptr = dest;
-	while (num--)
-		*ptr++ = '\0';
+	ft_memset(s, 0, n);
 }

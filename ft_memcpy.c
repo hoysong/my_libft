@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hoysong <hoysong@student.42gyeongsan.      +#+  +:+       +#+        */
+/*   By: hoysong <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/27 14:32:18 by hoysong           #+#    #+#             */
-/*   Updated: 2024/03/19 22:23:40 by hoysong          ###   ########.fr       */
+/*   Created: 2024/03/20 12:36:55 by hoysong           #+#    #+#             */
+/*   Updated: 2024/03/20 20:54:43 by hoysong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,13 @@
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	unsigned char	*destptr;
-	unsigned char	*srcptr;
+	char	*return_ptr;
 
-	destptr = (unsigned char *)dest;
-	srcptr = (unsigned char *)src;
-	if (destptr == 0 && srcptr == 0)
-		return (0);
-	while (n--)
-		*destptr++ = *srcptr++;
-	return (dest);
+	return_ptr = (char *)dest;
+	while (n > 0)
+	{
+		*(char *)dest++ = *(char *)src++;
+		n--;
+	}
+	return (return_ptr);
 }

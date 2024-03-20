@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hoysong <hoysong@student.42gyeongsan.      +#+  +:+       +#+        */
+/*   By: hoysong <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/26 14:50:59 by hoysong           #+#    #+#             */
-/*   Updated: 2024/03/12 16:53:55 by hoysong          ###   ########.fr       */
+/*   Created: 2024/03/20 05:10:47 by hoysong           #+#    #+#             */
+/*   Updated: 2024/03/20 05:18:30 by hoysong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isascii(int num)
+int	ft_isascii(int c)
 {
-	if (num >= 0 && num <= 127)
+	if (c >= 0 && c <= 127)
 		return (1);
 	return (0);
 }

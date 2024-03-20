@@ -3,21 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hoysong <hoysong@student.42gyeongsan.      +#+  +:+       +#+        */
+/*   By: hoysong <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/26 14:34:09 by hoysong           #+#    #+#             */
-/*   Updated: 2024/03/12 16:31:28 by hoysong          ###   ########.fr       */
+/*   Created: 2024/03/20 04:56:10 by hoysong           #+#    #+#             */
+/*   Updated: 2024/03/20 21:07:50 by hoysong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalnum(int num)
+int ft_isalnum(int c)
 {
-	char	c;
-
-	c = num;
-	if ((c >= 'a' && c <= 'z') \
-			|| (c >= 'A' && c <= 'Z') \
-			|| (c >= '0' && c <= '9'))
-		return (1);
+	if (ft_isalpha(c) || ft_isdigit(c))
+		return (8);
 	return (0);
 }

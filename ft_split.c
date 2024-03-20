@@ -6,7 +6,7 @@
 /*   By: hoysong <hoysong@student.42gyeongsan.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/08 05:23:10 by hoysong           #+#    #+#             */
-/*   Updated: 2024/03/19 23:02:50 by hoysong          ###   ########.fr       */
+/*   Updated: 2024/03/20 21:39:21 by hoysong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ static char	**make_arr(char const *s, char c, int *words)
 	return (arr);
 }
 
-static void	insert_digit(char const *s, char c, char **splits_arr, int *index)
+static void	insert_chars(char const *s, char c, char **splits_arr, int *index)
 {
 	int	i;
 

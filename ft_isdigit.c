@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hoysong <hoysong@student.42gyeongsan.      +#+  +:+       +#+        */
+/*   By: hoysong <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/26 14:12:28 by hoysong           #+#    #+#             */
-/*   Updated: 2024/03/13 00:40:05 by hoysong          ###   ########.fr       */
+/*   Created: 2024/03/20 04:49:15 by hoysong           #+#    #+#             */
+/*   Updated: 2024/03/20 04:55:56 by hoysong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isdigit(int num)
+int	ft_isdigit(int c)
 {
-	if (num >= '0' && num <= '9')
-		return (1);
+	if (c >= '0' && c <= '9')
+		return (2048);
 	return (0);
 }
