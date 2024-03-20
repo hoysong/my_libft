@@ -6,11 +6,12 @@
 /*   By: hoysong <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 12:23:36 by hoysong           #+#    #+#             */
-/*   Updated: 2024/03/20 12:36:50 by hoysong          ###   ########.fr       */
+/*   Updated: 2024/03/20 19:23:09 by hoysong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
 void	ft_bzero(void *s, size_t n)
 {
 	ft_memset(s, 0, n);

@@ -6,13 +6,9 @@
 /*   By: hoysong <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 04:35:00 by hoysong           #+#    #+#             */
-/*   Updated: 2024/03/20 05:04:28 by hoysong          ###   ########.fr       */
+/*   Updated: 2024/03/20 19:23:30 by hoysong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <string.h>
-#include <bsd/stdio.h>
-#include <ctype.h>
 
 int	ft_isalpha(int c)
 {

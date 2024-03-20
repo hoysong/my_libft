@@ -48,7 +48,7 @@ $(NAME): $(OBJS)
 all: $(NAME)
 
 %.o: %.c
-	$(CC) $(CFLAGS) -c -o $@ $< 
+	$(CC) $(CFLAGS) -c $? -o $@ 
 
 clean:
 	$(RM) $(OBJS)
@@ -56,6 +56,6 @@ clean:
 fclean: clean
 	$(RM) $(NAME)
 
-re: clean
+re: fclean
 	make all
 .PHONY: all clean fclean re
