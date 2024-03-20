@@ -6,11 +6,16 @@
 /*   By: hoysong <hoysong@student.42gyeongsan.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/05 23:30:53 by hoysong           #+#    #+#             */
-/*   Updated: 2024/03/19 22:24:58 by hoysong          ###   ########.fr       */
+/*   Updated: 2024/03/20 18:50:57 by hoysong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+char	ft_test(unsigned int i, char c)
+{
+	
+}
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
@@ -30,4 +35,10 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	}
 	newstr[i] = '\0';
 	return (newstr);
+}
+
+int	main(void)
+{
+	char	str1[] = "hello wordl!";
+	ft_strmapi(str1, ft_test);
 }
