@@ -6,7 +6,7 @@
 /*   By: hoysong <hoysong@student.42gyeongsan.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/29 20:33:25 by hoysong           #+#    #+#             */
-/*   Updated: 2024/03/22 12:06:14 by hoysong          ###   ########.fr       */
+/*   Updated: 2024/03/22 15:43:06 by hoysong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 
 	bigint = (unsigned char)c;
 	ptr = (unsigned char *)s;
-	while (*ptr != bigint && n > 0)
+	while (*ptr != bigint && n > 1)
 	{
 		ptr++;
 		n--;
