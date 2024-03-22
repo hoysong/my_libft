@@ -1,26 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hoysong <hoysong@student.42gyeongsan.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/06 01:16:08 by hoysong           #+#    #+#             */
-/*   Updated: 2024/03/12 10:57:46 by hoysong          ###   ########.fr       */
+/*   Created: 2024/02/29 13:58:28 by hoysong           #+#    #+#             */
+/*   Updated: 2024/03/17 14:39:05 by hoysong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-#include "libft.h"
-
-void	ft_striteri(char *s, void (*f)(unsigned int, char*))
+char	*ft_strchr(const char *s, int c)
 {
-	size_t	i;
-
-	i = 0;
-	while (s[i])
-	{
-		f(i, &s[i]);
-		i++;
-	}
+	while (*s != c && *s)
+		s++;
+	if (*s == c)
+		return ((char *)s);
+	else if (*s == 0)
+		return (0);
+	return ((char *)s);
 }

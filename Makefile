@@ -1,7 +1,9 @@
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
+# LIBS = -L ../libft
 RM = rm -f
-AR = ar rcus
+# the -ru flags 
+AR = ar rus
 SRCS = \
        ft_split.c \
        ft_atoi.c \
@@ -48,7 +50,7 @@ $(NAME): $(OBJS)
 all: $(NAME)
 
 %.o: %.c
-	$(CC) $(CFLAGS) -c $? -o $@ 
+	$(CC) $(CFLAGS) -c -o $@ $? 
 
 clean:
 	$(RM) $(OBJS)
@@ -56,6 +58,7 @@ clean:
 fclean: clean
 	$(RM) $(NAME)
 
-re: fclean
+re: clean
 	make all
+
 .PHONY: all clean fclean re
