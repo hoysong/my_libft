@@ -6,12 +6,11 @@
 /*   By: hoysong <hoysong@student.42gyeongsan.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 13:52:43 by hoysong           #+#    #+#             */
-/*   Updated: 2024/03/18 20:42:06 by hoysong          ###   ########.fr       */
+/*   Updated: 2024/03/22 11:56:03 by hoysong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <unistd.h>
 
 static char	*insert_digit(char *num_str, long int long_num)
 {

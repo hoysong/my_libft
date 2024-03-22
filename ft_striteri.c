@@ -6,11 +6,10 @@
 /*   By: hoysong <hoysong@student.42gyeongsan.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 01:16:08 by hoysong           #+#    #+#             */
-/*   Updated: 2024/03/12 10:57:46 by hoysong          ###   ########.fr       */
+/*   Updated: 2024/03/22 11:56:28 by hoysong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
 #include "libft.h"
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))

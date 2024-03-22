@@ -6,11 +6,10 @@
 /*   By: hoysong <hoysong@student.42gyeongsan.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/05 23:30:53 by hoysong           #+#    #+#             */
-/*   Updated: 2024/03/18 20:21:07 by hoysong          ###   ########.fr       */
+/*   Updated: 2024/03/22 11:56:59 by hoysong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))

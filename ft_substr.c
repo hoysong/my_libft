@@ -6,11 +6,10 @@
 /*   By: hoysong <hoysong@42gyeongsan.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/02 16:07:04 by hoysong           #+#    #+#             */
-/*   Updated: 2024/03/22 01:27:44 by hoysong          ###   ########.fr       */
+/*   Updated: 2024/03/22 11:57:23 by hoysong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)

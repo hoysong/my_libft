@@ -6,9 +6,11 @@
 /*   By: hoysong <hoysong@student.42gyeongsan.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/29 14:30:36 by hoysong           #+#    #+#             */
-/*   Updated: 2024/03/13 12:25:41 by hoysong          ###   ########.fr       */
+/*   Updated: 2024/03/22 11:57:14 by hoysong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)
 {

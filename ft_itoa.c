@@ -6,13 +6,13 @@
 /*   By: hoysong <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 16:14:50 by hoysong           #+#    #+#             */
-/*   Updated: 2024/03/18 20:36:57 by hoysong          ###   ########.fr       */
+/*   Updated: 2024/03/22 11:53:16 by hoysong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char	*insert_digit(char *num_str, long int long_num)
+static char	*insert_digit(char *num_str, long long long_num)
 {
 	int		i;
 	char	num_sign;
@@ -39,7 +39,7 @@ static char	*insert_digit(char *num_str, long int long_num)
 
 char	*ft_itoa(int n)
 {
-	long int	long_num;
+	long long	long_num;
 	char		*digit_str;
 	char		num_str[12];
 	char		*new_str;

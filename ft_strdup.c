@@ -6,11 +6,10 @@
 /*   By: hoysong <hoysong@student.42gyeongsan.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/02 00:16:30 by hoysong           #+#    #+#             */
-/*   Updated: 2024/03/13 20:22:41 by hoysong          ###   ########.fr       */
+/*   Updated: 2024/03/22 11:56:21 by hoysong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 char	*ft_strdup(const char *s)
