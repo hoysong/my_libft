@@ -6,7 +6,7 @@
 /*   By: hoysong <hoysong@42gyeongsan.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/01 21:05:09 by hoysong           #+#    #+#             */
-/*   Updated: 2024/03/22 15:14:51 by hoysong          ###   ########.fr       */
+/*   Updated: 2024/03/22 17:59:52 by hoysong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_calloc(size_t num, size_t size)
 	size_t			total_size;
 
 	total_size = size * num;
-	if (size != 0 && ((size_t)0 - 1) / size < num)
+	if ((size != 0 || num != 0) && (total_size / size != num))
 		return (NULL);
 	ptr = malloc(total_size);
 	if (ptr == 0)
