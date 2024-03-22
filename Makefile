@@ -1,8 +1,8 @@
+# the ar's -ru flags are find changed OBJ's
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 # LIBS = -L ../libft
 RM = rm -f
-# the -ru flags 
 AR = ar rus
 SRCS = \
        ft_split.c \
@@ -60,8 +60,5 @@ fclean: clean
 
 re: clean
 	make all
-so:
-	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRCS)
-	gcc -nostartfiles -shared -o libft.so $(OBJS)
 
 .PHONY: all clean fclean re
