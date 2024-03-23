@@ -3,7 +3,7 @@ $> hostname; uname -msr
 c3r1s6.42gyeongsan.kr
 Linux 6.5.0-21-generic x86_64
 $> date
-Sun Mar 24 05:16:11 AM KST 2024
+Sun Mar 24 05:55:39 AM KST 2024
 $> gcc --version
 gcc (Ubuntu 11.4.0-1ubuntu1~22.04) 11.4.0
 Copyright (C) 2021 Free Software Foundation, Inc.
@@ -66,7 +66,7 @@ $> make bonus
 make: *** 타겟 'bonus'을(를) 만들 규칙이 없습니다.  멈춤.
 
 $> ls -la libft.a
--rw-r--r-- 1 hoysong 2024_gyeongsan 53358 Mar 24 05:16 /goinfre/hoysong/hoyhoy/libft-war-machine/dirlibft/libft.a
+-rw-r--r-- 1 hoysong 2024_gyeongsan 53374 Mar 24 05:55 /goinfre/hoysong/hoyhoy/libft-war-machine/dirlibft/libft.a
 
 = Part1_functions ==============================================================
 
@@ -252,15 +252,8 @@ Diff OK :D
 = Test 9 ===================================================
 $> ./user_exe 09
 $> diff -U 3 user_output_test09 test09.output
---- /goinfre/hoysong/hoyhoy/libft-war-machine/tests/Part1_functions/ft_memcmp/user_output_test09	2024-03-24 05:16:13.894857230 +0900$
-+++ /goinfre/hoysong/hoyhoy/libft-war-machine/tests/Part1_functions/ft_memcmp/test09.output	2024-03-24 04:58:20.569067111 +0900$
-@@ -1 +1 @@$
--1$
-\ No newline at end of file$
-+0$
-\ No newline at end of file$
 
-Diff KO :(
+Diff OK :D
 
 = ft_strlen.c ==================================================================
 $> norminette ft_strlen.c | grep -E '(Error|Warning)'
@@ -519,15 +512,8 @@ Diff OK :D
 = Test 10 ==================================================
 $> ./user_exe 10
 $> diff -U 3 user_output_test10 test10.output
---- /goinfre/hoysong/hoyhoy/libft-war-machine/tests/Part1_functions/ft_strnstr/user_output_test10	2024-03-24 05:16:16.606881979 +0900$
-+++ /goinfre/hoysong/hoyhoy/libft-war-machine/tests/Part1_functions/ft_strnstr/test10.output	2024-03-24 04:58:20.569067111 +0900$
-@@ -1 +1 @@$
--lorem ipsum dolor sit amet$
-\ No newline at end of file$
-+NULL$
-\ No newline at end of file$
 
-Diff KO :(
+Diff OK :D
 
 = ft_strncmp.c =================================================================
 $> norminette ft_strncmp.c | grep -E '(Error|Warning)'
@@ -576,27 +562,13 @@ Diff OK :D
 = Test 9 ===================================================
 $> ./user_exe 09
 $> diff -U 3 user_output_test09 test09.output
---- /goinfre/hoysong/hoyhoy/libft-war-machine/tests/Part1_functions/ft_strncmp/user_output_test09	2024-03-24 05:16:17.014885702 +0900$
-+++ /goinfre/hoysong/hoyhoy/libft-war-machine/tests/Part1_functions/ft_strncmp/test09.output	2024-03-24 04:58:20.569067111 +0900$
-@@ -1 +1 @@$
--1$
-\ No newline at end of file$
-+0$
-\ No newline at end of file$
 
-Diff KO :(
+Diff OK :D
 = Test 10 ==================================================
 $> ./user_exe 10
 $> diff -U 3 user_output_test10 test10.output
---- /goinfre/hoysong/hoyhoy/libft-war-machine/tests/Part1_functions/ft_strncmp/user_output_test10	2024-03-24 05:16:17.038885922 +0900$
-+++ /goinfre/hoysong/hoyhoy/libft-war-machine/tests/Part1_functions/ft_strncmp/test10.output	2024-03-24 04:58:20.569067111 +0900$
-@@ -1 +1 @@$
--1$
-\ No newline at end of file$
-+0$
-\ No newline at end of file$
 
-Diff KO :(
+Diff OK :D
 = Test 11 ==================================================
 $> ./user_exe 11
 $> diff -U 3 user_output_test11 test11.output
