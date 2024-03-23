@@ -6,7 +6,7 @@
 /*   By: hoysong <hoysong@42gyeongsan.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/08 05:23:10 by hoysong           #+#    #+#             */
-/*   Updated: 2024/03/22 11:56:12 by hoysong          ###   ########.fr       */
+/*   Updated: 2024/03/24 01:11:38 by hoysong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ static char	**make_arr(char const *s, char c, int *words)
 	return (arr);
 }
 
-static int	insert_digit(char const *s, char c, char **splits_arr, int *index)
+static int	insert_alpha(char const *s, char c, char **splits_arr, int *index)
 {
 	int	i;
 
@@ -90,7 +90,7 @@ char	**ft_split(char const *s, char c)
 	split_count = 0;
 	index = 0;
 	splits = make_arr(s, c, &split_count);
-	if (insert_digit(s, c, splits, &index) == 0)
+	if (insert_alpha(s, c, splits, &index) == 0)
 		ft_free(splits, &index);
 	return (splits);
 }
