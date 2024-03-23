@@ -6,7 +6,7 @@
 /*   By: hoysong <hoysong@student.42gyeongsan.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 15:07:21 by hoysong           #+#    #+#             */
-/*   Updated: 2024/03/22 11:57:56 by hoysong          ###   ########.fr       */
+/*   Updated: 2024/03/24 05:03:06 by hoysong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ int		ft_isalnum(int num);
 int		ft_isascii(int num);
 int		ft_isprint(int num);
 size_t	ft_strlen(const char *dest);
+void	*ft_calloc(size_t num, size_t size);
 void	*ft_memset(void *dest, int n_src, unsigned long len);
 void	ft_bzero(void *dest, size_t num);
 void	*ft_memcpy(void *dest, const void *src, size_t n);
