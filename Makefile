@@ -1,12 +1,11 @@
 # the ar's -ru flags are find changed OBJ's
+# the
+#%.o: %.c
+#	$(CC) $(CFLAGS) -c $? -o $@
+# is replaced by
+# "OBJS = $(SRCS:.c=.o)"
+# CC and CFLAGS works for OBJS
 
-CC = cc
-
-CFLAGS = -Wall -Wextra -Werror
-
-RM = rm -f
-
-AR = ar rus
 
 SRCS = \
        ft_split.c \
@@ -44,10 +43,11 @@ SRCS = \
        ft_toupper.c \
        ft_putstr_fd.c
 
+CC = cc
+CFLAGS = -Wall -Wextra -Werror
+AR = ar rus
 OBJS = $(SRCS:.c=.o)
 
-%.o: %.c
-	$(CC) $(CFLAGS) -c $? -o $@
 
 NAME = libft.a
 $(NAME): $(OBJS)
@@ -55,12 +55,13 @@ $(NAME): $(OBJS)
 all: $(NAME)
 
 
+RM = rm -f
 clean:
 	$(RM) $(OBJS)
 fclean: clean
 	$(RM) $(NAME)
 
-re: clean
+re: fclean
 	make all
 
 .PHONY: all clean fclean re
