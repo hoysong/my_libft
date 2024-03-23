@@ -6,11 +6,11 @@
 /*   By: hoysong <hoysong@student.42gyeongsan.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/27 12:37:13 by hoysong           #+#    #+#             */
-/*   Updated: 2024/03/12 17:15:53 by hoysong          ###   ########.fr       */
+/*   Updated: 2024/03/24 01:13:28 by hoysong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h" 
 
 void	ft_bzero(void *dest, size_t num)
 {
