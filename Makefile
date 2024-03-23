@@ -1,9 +1,13 @@
 # the ar's -ru flags are find changed OBJ's
+
 CC = cc
+
 CFLAGS = -Wall -Wextra -Werror
-# LIBS = -L ../libft
+
 RM = rm -f
+
 AR = ar rus
+
 SRCS = \
        ft_split.c \
        ft_atoi.c \
@@ -42,19 +46,17 @@ SRCS = \
 
 OBJS = $(SRCS:.c=.o)
 
+%.o: %.c
+	$(CC) $(CFLAGS) -c $? -o $@
+
 NAME = libft.a
-
 $(NAME): $(OBJS)
-	$(AR) $(NAME) $(OBJS)
-
+	$(AR) $@ $(OBJS)
 all: $(NAME)
 
-%.o: %.c
-	$(CC) $(CFLAGS) -c -o $@ $? 
 
 clean:
 	$(RM) $(OBJS)
-
 fclean: clean
 	$(RM) $(NAME)
 
