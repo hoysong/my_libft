@@ -1,11 +1,8 @@
-# the ar's -ru flags are find changed OBJ's
-# the
+# ar's -r -u -s to -r -u
 # %.o: %.c
 #	 $(CC) $(CFLAGS) -c $? -o $@
 # is replaced by
 # "OBJS = $(SRCS:.c=.o)"
-# CC and CFLAGS works for OBJS
-
 
 SRCS = \
        ft_split.c \
@@ -49,7 +46,7 @@ CFLAGS = -Wall -Wextra -Werror
 
 OBJS = $(SRCS:.c=.o)
 
-AR = ar rus
+AR = ar -U -r -u -s 
 
 NAME = libft.a
 

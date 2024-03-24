@@ -3,7 +3,7 @@ $> hostname; uname -msr
 c3r1s6.42gyeongsan.kr
 Linux 6.5.0-21-generic x86_64
 $> date
-Sun Mar 24 05:55:39 AM KST 2024
+Sun Mar 24 08:43:46 PM KST 2024
 $> gcc --version
 gcc (Ubuntu 11.4.0-1ubuntu1~22.04) 11.4.0
 Copyright (C) 2021 Free Software Foundation, Inc.
@@ -58,15 +58,14 @@ cc -Wall -Wextra -Werror   -c -o ft_tolower.o ft_tolower.c
 cc -Wall -Wextra -Werror   -c -o ft_putnbr_fd.o ft_putnbr_fd.c
 cc -Wall -Wextra -Werror   -c -o ft_toupper.o ft_toupper.c
 cc -Wall -Wextra -Werror   -c -o ft_putstr_fd.o ft_putstr_fd.c
-ar rus libft.a ft_split.o ft_atoi.o ft_strchr.o ft_bzero.o ft_strdup.o ft_calloc.o ft_striteri.o ft_isalnum.o ft_strjoin.o ft_isalpha.o ft_strlcat.o ft_isascii.o ft_isdigit.o ft_strlcpy.o ft_isprint.o ft_strlen.o ft_itoa.o ft_strmapi.o ft_memchr.o ft_strncmp.o ft_memcmp.o ft_strnstr.o ft_memcpy.o ft_memmove.o ft_strrchr.o ft_memset.o ft_strtrim.o ft_putchar_fd.o ft_substr.o ft_putendl_fd.o ft_tolower.o ft_putnbr_fd.o ft_toupper.o ft_putstr_fd.o
-ar: `u' modifier ignored since `D' is the default (see `U')
+ar -U -r -u -s  libft.a ft_split.o ft_atoi.o ft_strchr.o ft_bzero.o ft_strdup.o ft_calloc.o ft_striteri.o ft_isalnum.o ft_strjoin.o ft_isalpha.o ft_strlcat.o ft_isascii.o ft_isdigit.o ft_strlcpy.o ft_isprint.o ft_strlen.o ft_itoa.o ft_strmapi.o ft_memchr.o ft_strncmp.o ft_memcmp.o ft_strnstr.o ft_memcpy.o ft_memmove.o ft_strrchr.o ft_memset.o ft_strtrim.o ft_putchar_fd.o ft_substr.o ft_putendl_fd.o ft_tolower.o ft_putnbr_fd.o ft_toupper.o ft_putstr_fd.o
 ar: creating libft.a
 
 $> make bonus
 make: *** 타겟 'bonus'을(를) 만들 규칙이 없습니다.  멈춤.
 
 $> ls -la libft.a
--rw-r--r-- 1 hoysong 2024_gyeongsan 53374 Mar 24 05:55 /goinfre/hoysong/hoyhoy/libft-war-machine/dirlibft/libft.a
+-rw-r--r-- 1 hoysong 2024_gyeongsan 53374 Mar 24 20:43 /goinfre/hoysong/hoyhoy/libft-war-machine/dirlibft/libft.a
 
 = Part1_functions ==============================================================
 
