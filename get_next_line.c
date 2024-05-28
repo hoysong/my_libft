@@ -6,7 +6,7 @@
 /*   By: hoysong <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/28 19:57:41 by hoysong           #+#    #+#             */
-/*   Updated: 2024/05/28 13:08:37 by hoysong          ###   ########.fr       */
+/*   Updated: 2024/05/28 13:37:55 by hoysong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -41,8 +41,8 @@ static char	*get_remain(char **tmp, ssize_t *read_len)
 
 static void	setup(ssize_t *read_len, char **tmp, char **buff, char **save)
 {
-	*read_len = BUFFER_SIZE;
-	*buff = ft_calloc(BUFFER_SIZE + 1, sizeof(char));
+	*read_len = GNL_BUFFER_SIZE;
+	*buff = ft_calloc(GNL_BUFFER_SIZE + 1, sizeof(char));
 	if (*save != 0 && **save != 0)
 	{
 		*tmp = ft_strdup(*save);
@@ -60,16 +60,16 @@ char	*get_next_line(int fd)
 	char			*tmp;
 
 	setup(&read_len, &tmp, &buff, &save);
-	while (read_len == BUFFER_SIZE)
+	while (read_len == GNL_BUFFER_SIZE)
 	{
-		read_len = read(fd, buff, BUFFER_SIZE);
+		read_len = read(fd, buff, GNL_BUFFER_SIZE);
 		if (read_len >= 0)
 			buff[read_len] = '\0';
 		save = tmp;
 		tmp = ft_strjoin(save, buff);
 		free(save);
 		save = get_remain(&tmp, &read_len);
-		if (save != 0 || BUFFER_SIZE > read_len)
+		if (save != 0 || GNL_BUFFER_SIZE > read_len)
 			break ;
 	}
 	free(buff);

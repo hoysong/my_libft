@@ -38,7 +38,8 @@ SRCS = \
        ft_tolower.c \
        ft_putnbr_fd.c \
        ft_toupper.c \
-       ft_putstr_fd.c
+       ft_putstr_fd.c \
+	   get_next_line.c
 
 CC = cc
 
