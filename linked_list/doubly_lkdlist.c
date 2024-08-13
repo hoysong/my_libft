@@ -6,7 +6,7 @@
 /*   By: hoysong <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/02 19:54:51 by hoysong           #+#    #+#             */
-/*   Updated: 2024/06/04 04:28:49 by hoysong          ###   ########.fr       */
+/*   Updated: 2024/08/13 15:31:15 by hoysong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,8 @@ void	insert_dubl(t_dnode *dest, t_dnode *new_node)
 
 /*
 	1. Description
-		This function can insert linked nodes in the middle of the doubly linked-list.
+		This function can insert linked nodes
+		in the middle of the doubly linked-list.
 		parameter's can be...
 		1. node in the middle of the doubly linked-list.
 		2. head or tail node.

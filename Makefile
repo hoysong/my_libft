@@ -34,9 +34,9 @@ SRCS = \
        ft_toupper.c \
        ft_putstr_fd.c \
 	   get_next_line.c \
-	   ../linked_list/doubly_lkdlist.c \
-	   ../linked_list/doubly_lkdlist_destroy.c \
-	   ../linked_list/singly_lkdlist.c
+	   ./linked_list/doubly_lkdlist.c \
+	   ./linked_list/doubly_lkdlist_destroy.c \
+	   ./linked_list/singly_lkdlist.c
 
 CC = cc
 
