@@ -6,7 +6,7 @@
 /*   By: hoysong <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/02 17:51:24 by hoysong           #+#    #+#             */
-/*   Updated: 2024/06/04 04:28:24 by hoysong          ###   ########.fr       */
+/*   Updated: 2024/08/19 00:41:49 by hoysong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef LKDLIST_H
@@ -36,6 +36,7 @@ typedef struct s_doubly_node
 t_dnode	*init_dubl(void);
 t_dnode	*find_head_dubly(t_dnode *doubly_node);
 t_dnode	*find_tail_dubly(t_dnode *doubly_node);
+t_dnode	*insert_data_dubl(t_dnode *doubly_node, void *src);
 
 void	insert_dubl(t_dnode *dest, t_dnode *new_node);
 void	insert_chain(t_dnode *dest, t_dnode *linked_node);
