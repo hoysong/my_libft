@@ -6,7 +6,7 @@
 /*   By: hoysong <hoysong@student.42gyeongsan.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 15:07:21 by hoysong           #+#    #+#             */
-/*   Updated: 2024/05/28 13:37:18 by hoysong          ###   ########.fr       */
+/*   Updated: 2024/08/19 00:58:21 by hoysong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define LIBFT_H
 # include <stdlib.h>
 # include <unistd.h>
+# include "./linked_list/lkdlist.h"
 # ifndef GNL_BUFFER_SIZE
 #  define GNL_BUFFER_SIZE 42
 # endif
@@ -58,5 +59,6 @@ void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 char	*get_next_line(int fd);
+t_dnode	*get_gnl_node(int fd);
 
 #endif

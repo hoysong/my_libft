@@ -34,9 +34,11 @@ SRCS = \
 	ft_toupper.c    \
 	ft_putstr_fd.c  \
 		get_next_line.c \
+		get_gnl_node.c  \
 			./linked_list/doubly_lkdlist.c         \
 			./linked_list/doubly_lkdlist_destroy.c \
 			./linked_list/singly_lkdlist.c         \
+			./linked_list/insert_doubly_data.c     \
 				./ft_printf/ft_printf.c     \
 				./ft_printf/libft_fd.c      \
 				./ft_printf/nbr_base.c      \
