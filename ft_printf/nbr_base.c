@@ -6,11 +6,11 @@
 /*   By: hoysong <hoysong@student.42gyeongsan.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/03 17:05:28 by hoysong           #+#    #+#             */
-/*   Updated: 2024/04/04 14:21:57 by hoysong          ###   ########.fr       */
+/*   Updated: 2024/08/26 14:24:04 by hoysong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include <unistd.h>
 
 static int	str_len(char *str)
 {
@@ -45,7 +45,7 @@ static int	initial(unsigned long long *nbr, int *total_len)
 	return (0);
 }
 
-int	nbrbase(unsigned long long nbr, char *base)
+int	nbrbase_printf(unsigned long long nbr, char *base)
 {
 	unsigned long long	power;
 	int					base_len;

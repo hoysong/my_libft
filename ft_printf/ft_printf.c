@@ -6,7 +6,7 @@
 /*   By: hoysong <hoysong@student.42gyeongsan.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/28 10:00:37 by hoysong           #+#    #+#             */
-/*   Updated: 2024/04/04 14:21:48 by hoysong          ###   ########.fr       */
+/*   Updated: 2024/08/26 14:19:37 by hoysong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,21 +19,21 @@ static int	s_option(va_list *ap)
 
 	s_flag = (va_arg(*ap, char *));
 	if (s_flag == NULL)
-		return (ft_putstr_fd("(null)", 1));
-	len = ft_putstr_fd(s_flag, 1);
+		return (ft_putstr_fd_printf("(null)", 1));
+	len = ft_putstr_fd_printf(s_flag, 1);
 	return (len);
 }
 
 static int	p_option(va_list *ap)
 {
-	int			len;
-	void		*p_flag;
+	int		len;
+	void	*p_flag;
 
 	p_flag = va_arg(*ap, void *);
 	if (p_flag == 0)
-		return (ft_putstr_fd("(nil)", 1));
-	len = ft_putstr_fd("0x", 1);
-	len += nbrbase((unsigned long long)p_flag, "0123456789abcdef");
+		return (ft_putstr_fd_printf("(nil)", 1));
+	len = ft_putstr_fd_printf("0x", 1);
+	len += nbrbase_printf((unsigned long long)p_flag, "0123456789abcdef");
 	return (len);
 }
 
@@ -43,17 +43,20 @@ static int	options_1(char *args, va_list *ap, int *err)
 
 	len = 0;
 	if (*args == 'c')
-		len = ft_putchar_fd(va_arg(*ap, int), 1);
+		len = ft_putchar_fd_printf(va_arg(*ap, int), 1);
 	else if (*args == 'd' || *args == 'i')
-		len = sign_nbr_base((int)va_arg(*ap, int), "0123456789");
+		len = sign_nbr_base_printf((int)va_arg(*ap, int), "0123456789");
 	else if (*args == 'u')
-		len = nbrbase((unsigned int)va_arg(*ap, int), "0123456789");
+		len = nbrbase_printf((unsigned int)va_arg(*ap, int), "0123456789");
 	else if (*args == '%')
-		len = ft_putchar_fd('%', 1);
+		len = ft_putchar_fd_printf('%', 1);
 	else if (*args == 'x')
-		len = nbrbase((long long)va_arg(*ap, unsigned int), "0123456789abcdef");
+		len = nbrbase_printf(
+				(long long)va_arg(*ap, unsigned int), "0123456789abcdef");
 	else if (*args == 'X')
-		len = nbrbase((long long)va_arg(*ap, unsigned int), "0123456789ABCDEF");
+		len = nbrbase_printf(
+				(long long)va_arg(*ap, unsigned int),
+				"0123456789ABCDEF");
 	else if (*args == 's')
 		return (s_option(ap));
 	else if (*args == 'p')
@@ -90,7 +93,7 @@ int	ft_printf(const char *args, ...)
 				break ;
 		}
 		else
-			str_len += ft_putchar_fd(*args, 1);
+			str_len += ft_putchar_fd_printf(*args, 1);
 		args++;
 	}
 	if (err == -1)

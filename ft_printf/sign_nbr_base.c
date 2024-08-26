@@ -6,7 +6,7 @@
 /*   By: hoysong <hoysong@student.42gyeongsan.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/03 17:05:28 by hoysong           #+#    #+#             */
-/*   Updated: 2024/04/04 10:43:11 by hoysong          ###   ########.fr       */
+/*   Updated: 2024/08/26 14:23:23 by hoysong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ static int	initial(long long *nbr, long long *power, int *total_len)
 	return (0);
 }
 
-int	sign_nbr_base(long long nbr, char *base)
+int	sign_nbr_base_printf(long long nbr, char *base)
 {
 	long long			power;
 	int					base_len;

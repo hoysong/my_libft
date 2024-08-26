@@ -6,7 +6,7 @@
 /*   By: hoysong <hoysong@student.42gyeongsan.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 15:07:21 by hoysong           #+#    #+#             */
-/*   Updated: 2024/08/19 00:58:21 by hoysong          ###   ########.fr       */
+/*   Updated: 2024/08/26 14:20:50 by hoysong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include "./linked_list/lkdlist.h"
+# include "./ft_printf/libftprintf.h"
 # ifndef GNL_BUFFER_SIZE
 #  define GNL_BUFFER_SIZE 42
 # endif
