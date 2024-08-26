@@ -44,6 +44,9 @@ SRCS = \
 				./ft_printf/nbr_base.c      \
 				./ft_printf/sign_nbr_base.c
 
+GRN = "\e[1;32m
+END = \e[0m"
+
 CC = cc
 
 CFLAGS = -Wall -Wextra -Werror
@@ -55,18 +58,23 @@ AR = ar -U -r -u -s
 NAME = libft.a
 
 $(NAME): $(OBJS)
+	@echo $(GRN)Make libft.a$(END)
 	$(AR) $@ $(OBJS)
 
 all: $(NAME)
+	@echo $(GRN)Make done.$(END)
 
 RM = rm -f
 
 clean:
+	@echo $(GRN)Make clean.$(END)
 	$(RM) $(OBJS)
 fclean: clean
+	@echo $(GRN)Make fclean.$(END)
 	$(RM) $(NAME)
 
 re: fclean
+	@echo $(GRN)Make re.$(END)
 	make all
 
 .PHONY: all clean fclean re
