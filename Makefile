@@ -33,6 +33,7 @@ SRCS = \
 	ft_putnbr_fd.c  \
 	ft_toupper.c    \
 	ft_putstr_fd.c  \
+	ft_is_str_digit.c \
 		get_next_line.c \
 		get_gnl_node.c  \
 			./linked_list/doubly_lkdlist.c         \
