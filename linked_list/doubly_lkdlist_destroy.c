@@ -6,21 +6,12 @@
 /*   By: hoysong <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/02 19:54:51 by hoysong           #+#    #+#             */
-/*   Updated: 2024/06/04 04:29:15 by hoysong          ###   ########.fr       */
+/*   Updated: 2024/08/29 14:55:12 by hoysong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "lkdlist.h"
 
-/*
-	== destroy_next_chain ==
-	1. description
-		this function destory next chains.
-		works for doubly linked list.
-		recommand parameter is like node->next_node.
-	2. return value
-		none
- */
 void	destroy_next_chain(t_dnode *doubly_node)
 {
 	if (doubly_node == 0)
@@ -37,15 +28,6 @@ void	destroy_next_chain(t_dnode *doubly_node)
 	free(doubly_node);
 }
 
-/*
-	== destroy_prev_chain ==
-	1. description
-		this function destory prev chains.
-		works for doubly linked list.
-		recommand parameter is like node->prev_node.
-	2. return value
-		none
- */
 void	destroy_prev_chain(t_dnode *doubly_node)
 {
 	if (doubly_node == 0)
@@ -62,14 +44,6 @@ void	destroy_prev_chain(t_dnode *doubly_node)
 	free(doubly_node);
 }
 
-/*
-	== destroy_doubly_list ==
-	1. Description
-		This function destroy doubly linked list.
-		All the nodes linked with parameter will be freed.
-	2. return value
-		none
- */
 void	destroy_doubly_list(t_dnode *doubly_node)
 {
 	t_dnode	*prev;
