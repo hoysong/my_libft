@@ -1,5 +1,6 @@
 SRCS = \
-	ft_split.c      \
+	ft_split.c        \
+		split_hdler.c \
 	ft_atoi.c       \
 	ft_strchr.c     \
 	ft_bzero.c      \

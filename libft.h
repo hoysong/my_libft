@@ -6,7 +6,7 @@
 /*   By: hoysong <hoysong@student.42gyeongsan.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 15:07:21 by hoysong           #+#    #+#             */
-/*   Updated: 2024/08/27 03:23:47 by hoysong          ###   ########.fr       */
+/*   Updated: 2024/09/14 08:26:37 by hoysong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,4 +63,51 @@ char	*get_next_line(int fd);
 t_dnode	*get_gnl_node(int fd);
 int		ft_is_str_digit(char *str);
 
+/*
+ *	1. Description.
+ *	For print split elements.
+ *	Parameter type is (char **).
+ *	This means, 'this function is not only for splits'.
+ *	'Any char **str can be printed'.
+ */
+void	print_splits(char **str);
+
+/*
+ *	1. Description.
+ *	This function can free ft_split's return value(char **).
+ *	This means, any char **str can be freed.
+ *	NOTICE! last of element MUST be NULL.
+ *	ex).
+ *	 str[0]hello.
+ *	 str[1]world!.
+ *	 str[2](NULL)
+ */
+void	free_splits(char **splits);
+
+/*
+ *	1. Description.
+ *	This function split argv.
+ *	after split, put (char **)str to 'node->data'.
+ *	2. return_value.
+ *	head of split_lkd_list.
+ *	NULL(0) if malloc fail.
+ */
+t_dnode	*make_split_lkd_list(char **argv);
+
+/*
+ *	1. Description.
+ *	This function will print split_lkd_list.
+ *	print with 'ft_printf'.
+ *	2. return_value
+ *	none.
+ */
+void	print_split_lkd_list(t_dnode *split_node);
+
+/*
+ *	1. Description.
+ *	This function free split lkd_list.
+ *	perfect parameter: return value of 'make_split_lkd_list'.
+ *	for this function, t_dnode's data 'MUST BE' char **.
+ */
+void	free_split_lkd_list(t_dnode *split_node);
 #endif

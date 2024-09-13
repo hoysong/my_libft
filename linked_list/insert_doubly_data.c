@@ -6,7 +6,7 @@
 /*   By: hoysong <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/02 19:54:51 by hoysong           #+#    #+#             */
-/*   Updated: 2024/08/29 14:54:52 by hoysong          ###   ########.fr       */
+/*   Updated: 2024/09/14 07:41:14 by hoysong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ t_dnode	*insert_data_dubl(t_dnode *doubly_node, void *src)
 	if (doubly_node->next_node == 0)
 	{
 		doubly_node->next_node = init_dubl();
+		if (doubly_node->next_node == NULL)
+			return (0);
 		doubly_node->next_node->data = src;
 		doubly_node->next_node->prev_node = doubly_node;
 		return (doubly_node->next_node);
@@ -24,6 +26,8 @@ t_dnode	*insert_data_dubl(t_dnode *doubly_node, void *src)
 	else if (doubly_node->prev_node == 0)
 	{
 		doubly_node->prev_node = init_dubl();
+		if (doubly_node->next_node == NULL)
+			return (0);
 		doubly_node->prev_node->data = src;
 		doubly_node->prev_node->next_node = doubly_node;
 		return (doubly_node->prev_node);
