@@ -49,9 +49,9 @@ SRCS = \
 GRN = "\e[1;32m
 END = \e[0m"
 
-CC = cc
+CC = clang
 
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -g -Wall -Wextra -Werror
 
 OBJS = $(SRCS:.c=.o)
 

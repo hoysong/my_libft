@@ -6,7 +6,7 @@
 /*   By: hoysong <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/14 07:18:31 by hoysong           #+#    #+#             */
-/*   Updated: 2024/09/14 08:29:51 by hoysong          ###   ########.fr       */
+/*   Updated: 2024/09/14 14:09:07 by hoysong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "./libft.h"
@@ -76,7 +76,6 @@ void	free_split_lkd_list(t_dnode *split_node)
 void	print_split_lkd_list(t_dnode *split_node)
 {
 	split_node = find_head_dubly(split_node);
-
 	while (split_node->next_node != NULL)
 	{
 		print_splits((char **)split_node->data);
