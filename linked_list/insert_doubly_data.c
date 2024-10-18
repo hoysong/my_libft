@@ -6,10 +6,9 @@
 /*   By: hoysong <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/02 19:54:51 by hoysong           #+#    #+#             */
-/*   Updated: 2024/09/14 07:41:14 by hoysong          ###   ########.fr       */
+/*   Updated: 2024/10/18 18:44:43 by hoysong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 #include "lkdlist.h"
 
 t_dnode	*insert_data_dubl(t_dnode *doubly_node, void *src)
